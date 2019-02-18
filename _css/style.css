@@ -20,6 +20,7 @@ h1, h2, h3, h4, h5, h6, p{
         "main"
         "notified"
         "depositions"
+        "footer"
     ;
 }
 /************ TEMPLATES AREAS ************/
@@ -53,6 +54,11 @@ main{
     display: flex;
     flex-direction: column;
     padding: 40px 10%;
+}
+footer{
+    grid-area: footer;
+    background: rgb(227,227,227);
+    padding: 20px 10%;
 }
 /************ BOX-HEADER ************/
 #box-header1{
@@ -155,6 +161,7 @@ main .img-services{
 }
 #notified-1 p{
     text-align: justify;
+    color: rgb(110,110,110);
     margin: 15px 0;
     line-height: 25px;
 }
@@ -223,6 +230,9 @@ main .img-services{
 .img-people img{
     margin-right: 5px;
 }
+.img-people img:hover{
+    cursor: pointer;
+}
 /* icons-network */
 .icons-network{
     display: flex;
@@ -248,6 +258,25 @@ main .img-services{
 .icons-network div:hover{
     background: #2ecb70;
 }
+/************ BOX-NOTIFIED ************/
+footer ul{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+footer li{
+    list-style: none;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+footer li a{
+    color: rgb(110,110,110);
+    text-decoration: none;
+    font-size: 18px;
+}
+
 
 /************ Media SMALL ************/
 @media(min-width: 768px){
@@ -337,11 +366,17 @@ main .img-services{
         width: 100%;
     }
     /************ DEPOSITIONS ************/
+    .depositions{
+        padding: 70px 10%;
+    }
     .depositions p{
         width: 70%;
         text-align: center;
     }
-    
+    /************ FOOTER ************/
+    footer li{
+        margin-right: 40px;
+    }
 }
 @media(min-width: 1200px){
     /************ HEADER ************/
@@ -410,11 +445,17 @@ main .img-services{
         padding: 30px 15%;
     }
     .box-notified div{
+        height: 100%;
         width: 45%;
+        justify-content: center;
     }
     /* 1° notified */
     #notified-1 form{
         width: 80%;
         height: 55px;
+    }
+     /************ FOOTER ************/
+     footer li{
+        margin-right: 50px;
     }
 }
