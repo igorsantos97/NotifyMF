@@ -11,54 +11,14 @@ body{
 h1, h2, h3, h4, h5, h6, p{
     margin: 0;
 }
-.grid{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(5, minmax(100px, auto));
-    grid-template-areas: 
-        "header"
-        "main"
-        "notified"
-        "depositions"
-        "footer"
-    ;
-}
-/************ TEMPLATES AREAS ************/
 header{
-    grid-area: header;
-    background: url('../_assets/_img/banner.png')no-repeat;
+    background: url('../_img/banner.png')no-repeat;
     background-size: cover;
     background-position: bottom;
     display: flex;
     flex-direction: column;
     height: 60vh;
     padding: 0 5%;
-}
-main{
-    align-items: center;
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-}
-.box-notified{
-    align-items: center;
-    background: rgb(227,227,227);
-    display: flex;    
-    grid-area: notified;
-    flex-direction: column;
-    padding: 40px 10%;
-}
-.depositions{
-    align-items: center;
-    grid-area: depositions;
-    display: flex;
-    flex-direction: column;
-    padding: 40px 10%;
-}
-footer{
-    grid-area: footer;
-    background: rgb(227,227,227);
-    padding: 20px 10%;
 }
 /************ BOX-HEADER ************/
 #box-header1{
@@ -116,6 +76,11 @@ footer{
 }
 
 /************ MAIN ************/
+main{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
 main .box-services{
     align-items: center;
     display: flex;
@@ -143,6 +108,13 @@ main .img-services{
     width: 60px;
 }
 /************ BOX-NOTIFIED ************/
+.box-notified{
+    align-items: center;
+    background: rgb(227,227,227);
+    display: flex;    
+    flex-direction: column;
+    padding: 40px 10%;
+}
 .box-notified div{
     height: 250px;
     margin-bottom: 10px;
@@ -203,6 +175,12 @@ main .img-services{
 }
 
 /************ DEPOSITION ************/
+.depositions{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 10%;
+}
 .depositions p{
     color: rgb(110,110,110);
     text-align: justify;
@@ -259,6 +237,10 @@ main .img-services{
     background: #2ecb70;
 }
 /************ BOX-NOTIFIED ************/
+footer{
+    background: rgb(227,227,227);
+    padding: 20px 10%;
+}
 footer ul{
     align-items: center;
     display: flex;
@@ -417,7 +399,6 @@ footer li a{
         border: none;
         height: 50px;
         width: 50px;
-        /* background: #c1c1c1; */
     }
     .box-systems div:hover{
         border: none;
